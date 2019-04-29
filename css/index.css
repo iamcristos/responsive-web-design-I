@@ -273,7 +273,7 @@ footer p{
     }
 
     nav a{
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid gray;
         margin: 0.4rem 0;
         width: 100%;
         text-align: center;
