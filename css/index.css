@@ -1,3 +1,379 @@
 /* Use your own code or past solution for Great Idea Web Page CSS here! */
 
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+:root{
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.body{ 
+	margin: 1rem;
+	padding: 1rem
+}
+
+header{
+    display: flex;
+
+}
+
+nav{
+	display: flex;
+    justify-content: space-around;
+    align-content: center;
+	width: 100%;
+}
+
+nav:nth-last-child(){
+    padding-right: 0;
+    margin-right: 0
+}
+
+nav a{
+	text-decoration: none;
+    color: gray;
+    margin-top: 0.5rem
+}
+
+header div{
+	display: flex;
+	flex-direction: column;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin: 2rem 2.5rem;
+}
+
+.container-head {
+    text-align: center;
+}
+
+h1{
+    font-size: 5rem;
+    text-align: center
+}
+
+button{
+    width: 9rem;
+    height: 2rem;
+    margin-left: 2rem;
+    border: 1px solid black
+}
+
+.left{
+    padding: 2rem;
+    padding-right: 0
+}
+
+.sec-2{
+    flex-direction: column;
+    align-items: space-around;
+    flex-wrap: wrap
+}
+
+.container-2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.middle-img{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 2rem 2.5rem;
+}
+
+.middle-img img{
+    width:100%;
+    padding-right: 2rem
+}
+
+.sec-3{
+    margin: 2rem 2.5rem;
+    margin-left: 2.5rem;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.container-sec-3{
+    flex-basis: 25rem;
+    margin-bottom: 2.5rem
+}
+
+footer {
+	display: flex;
+	flex-direction: column;
+    margin: 0 2rem 2rem; 
+	padding: 2rem;
+}
+
+footer h3,p{
+	font-family: sans-serif;
+}
+
+footer p{
+	text-align: center
+}
+
+.service {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	margin: 0 2rem 1rem 4rem;
+    padding: 0;
+    border-bottom: 1px solid black;
+}
+
+.services{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+    margin: 2rem 0;
+}
+
+
+.sec-container{
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 1rem;
+    margin-left: 3.5rem;
+    margin-right: 2.5rem;
+    border-bottom: 1px solid black;
+}
+.card{
+	flex-basis:45%;
+	display: flex;
+	flex-direction: column;
+	border: 1px solid black;
+	background-color: whitesmoke;
+    justify-content: space-between;
+    margin: 1rem;
+    padding: 1rem
+}
+
+.service-card {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem;
+    flex-wrap: wrap;
+    margin-right: 3rem
+}
+
+.service-right {
+    flex-basis: 40%;
+    margin-left: 2rem
+}
+
+li,p{
+    line-height: 2
+}
+
+.service-left img{
+    width: 100%;
+    padding-right: 1rem
+}
+
+@media (max-width:800px){
+    header{
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    nav{
+        margin: 2rem
+    }
+
+    .left{
+        display: none
+    }
+
+    h1{
+        font-size: 2rem
+    }
+
+    button {
+        width:5rem;
+        margin: 0 0 2rem 1.5rem
+    }
+
+    .container {
+        flex-direction: row;
+        flex-wrap: wrap
+    }
+
+    .container-2{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .right{
+        flex-basis: 45%
+    }
+
+    .middle-img {
+        padding: 0;
+       margin: 0;
+       width: 100%
+    }
+
+    .middle-img .middle-im {
+        padding-left: 0;
+        padding: 2rem 0 
+    }
+
+    .sec-3 {
+        justify-content: space-around;
+        padding-right:0 
+    }
+
+    .container-sec-3 {
+        flex-basis: 30%;
+        padding-right:0
+    }
+
+    footer{
+        margin-top: 1rem
+    }
+
+    .card,.service-right{
+        flex-basis: 100%
+    }
+
+    .service-left img{
+        padding: 2rem
+    }
+}
+
+@media (max-width:500px) {
+    .body{
+        margin: 0;
+        padding: 0
+    }
+
+    header{
+        margin-top: 0
+    }
+
+    nav{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin: 0.5rem 0
+    }
+
+    nav a{
+        border-bottom: 1px solid gray;
+        margin: 0.4rem 0;
+        width: 100%;
+        text-align: center;
+        padding: 0.3rem
+    }
+
+    .sec-1,.sec-2,.sec-3,.foot {
+        margin: 0.8rem 0 
+    }
+
+    .container-2 {
+        flex-direction: column;
+        margin: 0
+    }
+
+    .sec-3{
+        flex-direction: column
+    }
+
+    footer{
+        padding: 0
+    }
+
+    footer p{
+        margin-top: 1rem;
+    }
+
+    .right{
+        margin-top: 1rem
+    }
+
+    .sec-container{
+        flex-direction: column
+    }
+}
+
+
+
+
 
