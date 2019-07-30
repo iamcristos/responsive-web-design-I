@@ -86,13 +86,10 @@ nav{
 	display: flex;
     justify-content: space-around;
     align-content: center;
-	width: 100%;
+	width: 75%;
 }
 
-nav:nth-last-child(){
-    padding-right: 0;
-    margin-right: 0
-}
+
 
 nav a{
 	text-decoration: none;
@@ -103,7 +100,13 @@ nav a{
 header div{
 	display: flex;
 	flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+header div img{
+    padding-left: 3rem;
+    padding-right: 0
 }
 
 .container {
@@ -116,6 +119,16 @@ header div{
 
 .container-head {
     text-align: center;
+    padding-right: 10rem
+}
+
+.sec-1 {
+    display: flex;
+    justify-content: flex-end
+}
+
+.sec-1 div img{
+    padding-right: 4rem;
 }
 
 h1{
@@ -137,14 +150,13 @@ button{
 
 .sec-2{
     flex-direction: column;
-    align-items: space-around;
+    align-items: flex-start;
     flex-wrap: wrap
 }
 
 .container-2{
     display: flex;
     justify-content: space-around;
-    align-items: center;
 }
 
 .middle-img{
@@ -152,12 +164,12 @@ button{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin: 2rem 2.5rem;
+    margin: 2rem 2.3rem 1.8rem 0;
 }
 
 .middle-img img{
     width:100%;
-    padding-right: 2rem
+    padding-right: 2.5rem
 }
 
 .sec-3{
@@ -263,17 +275,26 @@ li,p{
     }
 
     h1{
-        font-size: 2rem
+        font-size: 3rem;
+    }
+
+    .container-head{
+        margin-left: 7rem;
     }
 
     button {
         width:5rem;
-        margin: 0 0 2rem 1.5rem
+        margin: 0 0 1.5rem 1rem
     }
 
     .container {
         flex-direction: row;
         flex-wrap: wrap
+    }
+
+    .sec-1{
+        align-items: center;
+        justify-content: center;
     }
 
     .container-2{
@@ -319,20 +340,31 @@ li,p{
 }
 
 @media (max-width:500px) {
+    :root{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
     .body{
         margin: 0;
         padding: 0
     }
 
     header{
-        margin-top: 0
+        margin-top: 0;
+        align-items: flex-start;
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%
     }
 
     nav{
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
-        margin: 0.5rem 0
+        margin: 0.5rem 0;
+        width: 100%
     }
 
     nav a{
@@ -343,13 +375,18 @@ li,p{
         padding: 0.3rem
     }
 
+    header div{
+        width: 80%;
+        align-items: center;
+    }
+
     .sec-1,.sec-2,.sec-3,.foot {
-        margin: 0.8rem 0 
+        margin: 0.8rem 1rem 
     }
 
     .container-2 {
         flex-direction: column;
-        margin: 0
+        margin: 0 0rem
     }
 
     .sec-3{
